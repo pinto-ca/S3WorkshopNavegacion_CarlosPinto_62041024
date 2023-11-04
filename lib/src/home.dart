@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_workshop_navegacion/main.dart';
+import 'package:flutter_workshop_navegacion/src/bicycle_page.dart';
+import 'package:flutter_workshop_navegacion/src/car_page.dart';
+import 'package:flutter_workshop_navegacion/src/direction_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -23,12 +25,17 @@ class HomePage extends StatelessWidget {
           ]),
           title: const Text("Tabs Demo"),
         ),
-        body: const TabBarView(children: [
-          Icon(Icons.directions_car),
-          Icon(Icons.directions_transit),
-          Icon(Icons.directions_bike),
-        ]),
+        body: const TabBarView(
+          children: [
+             CarPage(),
+             DirectionPage(),
+             BicyclePage(),
+          ],
+        ),
       ),
     );
   }
+
 }
+
+
